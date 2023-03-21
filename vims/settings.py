@@ -41,14 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my apps
+    'users',
     'blog',
     'classes',
     'courses',
-    'lecturers',
     'librarys',
     'programs',
     'student_payments',
-    'students',
     'subscribed_courses',
     'rest_framework',
     'django_filters',
@@ -179,3 +178,5 @@ REST_FRAMEWORK = {
 DJOSER = {
     "USER_ID_FIELD": "username",
 }
+
+AUTH_USER_MODEL = 'users.CustomUser'
