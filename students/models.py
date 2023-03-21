@@ -18,3 +18,6 @@ class Student(models.Model):
     adm_no = models.CharField(max_length=255)
     gender = models.CharField(max_length=255)
     status =  models.BooleanField(default=True)
+    
+    def __str__(self) -> str:
+        return self.name

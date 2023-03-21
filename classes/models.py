@@ -5,7 +5,7 @@ from lecturers.models import Lecturer
 
 # Create your models here.
 class Class(models.Model):
-    class_id = models.IntegerField( primary_key=True, editable=False, unique=True)
+    # class_id = models.IntegerField( primary_key=True, editable=False, unique=True)
     course = models.ForeignKey(Course,on_delete=models.PROTECT)
     program = models.ForeignKey(Program,on_delete=models.PROTECT)
     lecturer = models.ForeignKey(Lecturer,on_delete=models.PROTECT)
@@ -18,4 +18,4 @@ class Class(models.Model):
     type = models.CharField(max_length=255)
     
     def __str__(self) -> str:
-        return self.course + self.lecturer
+        return self.course.course_name + self.lecturer.first_name

@@ -28,3 +28,6 @@ class Lecturer(models.Model):
         Course, on_delete=models.CASCADE, null=True, related_name="course_4")
     course_5 = models.ForeignKey(
         Course, on_delete=models.CASCADE, null=True, related_name="course_5")
+
+    def __str__(self) -> str:
+        return self.first_name + " " + self.second_name

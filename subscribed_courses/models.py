@@ -10,3 +10,7 @@ class SubscribedCourse(models.Model):
     course =models.ForeignKey(Course,on_delete=models.CASCADE)
     student =models.ForeignKey(Student,on_delete=models.CASCADE)
     subscribed_date =models.DateTimeField()
+    
+        
+    def __str__(self) -> str:
+        return self.course.course_name

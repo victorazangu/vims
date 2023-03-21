@@ -14,3 +14,6 @@ class Program(models.Model):
     starts = models.DateField()
     ends = models.DateField()
     status = models.BooleanField()
+    
+    def __str__(self) -> str:
+        return self.program_name + "(" + self.contact_person+")"

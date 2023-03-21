@@ -15,3 +15,6 @@ class StudentPayment(models.Model):
     reference_no = models.CharField(max_length=255)
     paid_on = models.DateField()
     paid_by = models.CharField(max_length=450)
+    
+    def __str__(self) -> str:
+        return self.student.name + "(" + self.purpose+")"
