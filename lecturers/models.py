@@ -18,8 +18,13 @@ class Lecturer(models.Model):
     address = models.CharField(max_length=255)
     # profile =models.ImageField()
     status = models.BooleanField()
-    course_1 = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
-    course_2 = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
-    course_3 = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
-    course_4 = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
-    course_5 = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
+    course_1 = models.ForeignKey(
+        Course, on_delete=models.CASCADE, null=True, related_name="course_1")
+    course_2 = models.ForeignKey(
+        Course, on_delete=models.CASCADE, null=True, related_name="course_2")
+    course_3 = models.ForeignKey(
+        Course, on_delete=models.CASCADE, null=True, related_name="course_3")
+    course_4 = models.ForeignKey(
+        Course, on_delete=models.CASCADE, null=True, related_name="course_4")
+    course_5 = models.ForeignKey(
+        Course, on_delete=models.CASCADE, null=True, related_name="course_5")

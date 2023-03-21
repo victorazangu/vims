@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'classes',
     'courses',
     'lecturers',
-    'library',
+    'librarys',
     'programs',
     'student_payments',
     'students',
